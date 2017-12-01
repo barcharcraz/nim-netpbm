@@ -10,9 +10,9 @@ type
     col*: cuint
 
 
-var pm_plain_output* {.importc: "pm_plain_output", dynlib: netpbm.}: cint
+#var pm_plain_output* {.importc: "pm_plain_output", dynlib: netpbm.}: cint
 
-var pm_progname* {.importc: "pm_progname", dynlib: netpbm.}: cstring
+#var pm_progname* {.importc: "pm_progname", dynlib: netpbm.}: cstring
 
 proc pm_init*(progname: cstring; flags: cuint) {.cdecl, importc: "pm_init",
     dynlib: netpbm.}
