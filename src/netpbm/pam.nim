@@ -74,11 +74,11 @@ proc pnm_allocrowimage*(pamP: ptr pam): ptr cuchar {.cdecl,
     importc: "pnm_allocrowimage", dynlib: netpbm.}
 proc pnm_freerowimage*(rowimage: ptr cuchar) {.cdecl, importc: "pnm_freerowimage",
     dynlib: netpbm.}
-proc pnm_readpaminit*(file: ptr FILE; pamP: ptr pam; size: cint) {.cdecl,
+proc pnm_readpaminit*(file: File; pamP: ptr pam; size: cint) {.cdecl,
     importc: "pnm_readpaminit", dynlib: netpbm.}
 proc pnm_readpamrow*(pamP: ptr pam; tuplerow: ptr `tuple`) {.cdecl,
     importc: "pnm_readpamrow", dynlib: netpbm.}
-proc pnm_readpam*(file: ptr FILE; pamP: ptr pam; size: cint): ptr ptr `tuple` {.cdecl,
+proc pnm_readpam*(file: File; pamP: ptr pam; size: cint): ptr ptr `tuple` {.cdecl,
     importc: "pnm_readpam", dynlib: netpbm.}
 proc pnm_writepaminit*(pamP: ptr pam) {.cdecl, importc: "pnm_writepaminit",
                                     dynlib: netpbm.}
@@ -107,7 +107,7 @@ proc pnm_allocpamarrayn*(pamP: ptr pam): ptr ptr tuplen {.cdecl,
     importc: "pnm_allocpamarrayn", dynlib: netpbm.}
 proc pnm_freepamarrayn*(tuplenarray: ptr ptr tuplen; pamP: ptr pam) {.cdecl,
     importc: "pnm_freepamarrayn", dynlib: netpbm.}
-proc pnm_readpamn*(file: ptr FILE; pamP: ptr pam; size: cint): ptr ptr tuplen {.cdecl,
+proc pnm_readpamn*(file: File; pamP: ptr pam; size: cint): ptr ptr tuplen {.cdecl,
     importc: "pnm_readpamn", dynlib: netpbm.}
 proc pnm_writepamn*(pamP: ptr pam; tuplenarray: ptr ptr tuplen) {.cdecl,
     importc: "pnm_writepamn", dynlib: netpbm.}
